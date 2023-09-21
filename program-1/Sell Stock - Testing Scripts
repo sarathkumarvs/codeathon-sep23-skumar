@@ -1,0 +1,19 @@
+# Test script for find_max_profit function
+
+def test_find_max_profit():
+    # Test case 1: Empty list
+    assert find_max_profit([]) == 0.0
+
+    # Test case 2: Single price
+    assert find_max_profit([10.0]) == 0.0
+
+    # Test case 3: Increasing prices
+    assert find_max_profit([10.0, 20.0, 30.0, 40.0, 50.0]) == 40.0
+
+    # Test case 4: Decreasing prices
+    assert find_max_profit([50.0, 40.0, 30.0, 20.0, 10.0]) == 0.0
+
+    # Test case 5: Random prices
+    assert find_max_profit([10.0, 20.0, 15.0, 25.0, 30.0, 5.0, 50.0]) == 45.0
+
+test_find_max_profit()
