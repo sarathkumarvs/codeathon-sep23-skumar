@@ -1,0 +1,19 @@
+# Test cases for sort_array function
+
+def test_sort_array():
+    # Test case 1: Empty array
+    assert sort_array([]) == []
+
+    # Test case 2: Array with one element
+    assert sort_array([1]) == [1]
+
+    # Test case 3: Array with multiple elements
+    assert sort_array([3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]) == [1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9]
+
+    # Test case 4: Array with negative elements
+    assert sort_array([-3, -1, -4, -1, -5, -9, -2, -6, -5, -3, -5]) == [-9, -6, -5, -5, -4, -3, -3, -2, -1, -1, -5]
+
+    # Test case 5: Array with duplicate elements
+    assert sort_array([1, 2, 3, 4, 5, 5, 4, 3, 2, 1]) == [1, 1, 2, 2, 3, 3, 4, 4, 5, 5]
+
+test_sort_array()
