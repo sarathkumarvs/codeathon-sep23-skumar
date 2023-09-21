@@ -1,0 +1,20 @@
+# Write a program that finds the best days to buy and sell stocks to maximize profit
+
+def find_max_profit(prices):
+    """
+    Finds the maximum profit that can be made by buying and selling stocks.
+
+    Args:
+        prices (list): A list of stock prices.
+
+    Returns:
+        float: The maximum profit that can be made.
+    """
+    min_price = float('inf')
+    max_profit = 0.0
+    for price in prices:
+        if price < min_price:
+            min_price = price
+        elif price - min_price > max_profit:
+            max_profit = price - min_price
+    return max_profit
