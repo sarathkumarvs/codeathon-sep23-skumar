@@ -1,0 +1,19 @@
+# Test cases for is_valid_ip_address function
+
+def test_is_valid_ip_address():
+    # Test case 1: Valid IP address
+    assert is_valid_ip_address('192.168.0.1') == True
+
+    # Test case 2: Invalid IP address (wrong number of parts)
+    assert is_valid_ip_address('192.168.0') == False
+
+    # Test case 3: Invalid IP address (non-numeric parts)
+    assert is_valid_ip_address('192.168.0.x') == False
+
+    # Test case 4: Invalid IP address (out of range parts)
+    assert is_valid_ip_address('192.168.0.256') == False
+
+    # Test case 5: Invalid IP address (leading zeros)
+    assert is_valid_ip_address('192.168.00.1') == False
+
+test_is_valid_ip_address()
